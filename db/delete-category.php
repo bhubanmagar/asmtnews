@@ -1,12 +1,18 @@
 <?php
-  if(isset($_GET['id'])){
-   $id =$_GET['id'];
-   $query = "DELETE FROM  category WHERE id= '$id' ";
-   include('connect.php');
-   if(mysqli_query($conn,$query)){
-    header("location:../category.php?msg=sucessfully deleted");
+include('connect.php');
 
-   }else {
-    header("location:../category.php?errmsg=".mysqli_error($conn));
-   }
-  } ?>
+if(isset($_GET['id'])){
+    $id=$_GET['id'];
+    $query="DELETE FROM category WHERE id='$id'";
+    if (mysqli_query($conn, $query)) {
+        header('Location:../category.php?msg=Successfully deleted');
+        
+    }
+    else{
+        header("Location:../category.php?errmsg=".mysqli_error($conn));
+    }
+}
+
+
+
+?>

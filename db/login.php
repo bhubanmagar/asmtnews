@@ -32,3 +32,9 @@
   }
 
 ?>
+
+int[10] price = {100,200,900,300,};
+price[3];
+
+pirce = {"apple"=>100,"orange"=>900}
+price["apple"]
