@@ -12,4 +12,3 @@
     <?php echo $_GET['msg']; ?>
   </div>
   <?php } ?>
-      
