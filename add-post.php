@@ -26,7 +26,7 @@ $categoryResult = mysqli_query($conn,$categoryQuery);
   <div class="row">
   <?php include('include/left-nav.php');?>
       <div class="col-8">
-        <form method="POST"action="#">
+        <form method="POST"action="db/add-post.php" enctype="multipart/form-data">
          <div class="mb-3">
            <label for="" class="form-label">Title</label>
            <input type="text" class="form-control" name="title">
@@ -63,10 +63,10 @@ $categoryResult = mysqli_query($conn,$categoryQuery);
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 <script src="https://cdn.tiny.cloud/1/8j4yh3rjpf423i8ijhpsg2u1bj94t70b1ftfvc47ofrn0r3u/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
 <script>
- 
-var useDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  
+  var useDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
 
-tinymce.init({
+  tinymce.init({
   selector: '#news',
   plugins: 'print preview paste importcss searchreplace autolink autosave save directionality code visualblocks visualchars fullscreen image link media template codesample table charmap hr pagebreak nonbreaking anchor toc insertdatetime advlist lists wordcount imagetools textpattern noneditable help charmap quickbars emoticons',
   imagetools_cors_hosts: ['picsum.photos'],
